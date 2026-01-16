@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array vs Object Example</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+
+  <h2>Array Example</h2>
+  <div id="arrayResult"></div>
+
+  <h2>Object Example</h2>
+  <div id="objectResult"></div>
+
+  <script>
+    // -------- ARRAY Example --------
+    let marks = [88.7, 92.76, 99.87, 88.76, 76, 87.99];
+    let arrayOutput = "";
+
+    for (let i = 0; i < marks.length; i++) {
+      arrayOutput += "Subject " + (i + 1) + ": " + marks[i] + "<br>";
+    }
+
+    document.getElementById("arrayResult").innerHTML = arrayOutput;
+
+    // -------- OBJECT Example --------
+    let subjects = {
+      phy: 88.7,
+      che: 92.76,
+      maths: 99.87,
+      english: 88.76,
+      urdu: 76,
+      islamyat: 87.99
+    };
+
+    let objectOutput = "";
+    for (let key in subjects) {
+      objectOutput += key + ": " + subjects[key] + "<br>";
+    }
+
+    document.getElementById("objectResult").innerHTML = objectOutput;
+  </script>
+</body>
+</html>

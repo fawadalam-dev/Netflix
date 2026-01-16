@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ternary Oprators</title>
+</head>
+<body  style="font-family: Arial, Helvetica, sans-serif;text-align: center;"> -->
+    <!-- <h2>Enter age if you are adult or minor</h2>
+    <input type="number" id="Enterage" placeholder="Enter your age ">
+    <button style="background-color: rgb(35, 123, 224);color: white;border: radius 7px;"onclick="btnfun()">Click</button>
+    <p id="result"></p> -->
+    <!-- <h2>Check Your Result</h2>
+    <input type="number" id="enternum" placeholder="enter your number">
+        <button onclick="Grade()">Check result </button>
+    <p id="result"></p> -->
+    <!-- <h2>Logged In</h2>
+    <input type="email" id="password" placeholder="enter email">
+    <button onclick="btnclick()">Log In </button>
+    <p id="password-check"></p>
+    <script  src="ternaryop.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Simulation</title>
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+  <h2>Login Form</h2>
+
+  <input type="email" id="email" placeholder="Enter your email"><br><br>
+  <input type="password" id="password" placeholder="Enter your password"><br><br>
+  <button onclick="loginCheck()">Log In</button>
+
+  <p id="login-result" style="font-weight: bold; margin-top: 20px;"></p>
+
+  <script>
+    function loginCheck() {
+      const userEmail = document.getElementById("email").value;
+      const userPass = document.getElementById("password").value;
+
+      // Example credentials
+      const correctEmail = "fawad@example.com";
+      const correctPass = "12345";
+
+      // Check login using ternary operator
+      let message = (userEmail === correctEmail && userPass === correctPass)
+        ? "✅ You are logged in!"
+        : (!userEmail || !userPass)
+          ? "⚠️ Please fill in both fields"
+          : "❌ Email or password is incorrect";
+
+      document.getElementById("login-result").innerHTML = message;
+    }
+  </script>
+</body>
+</html>
