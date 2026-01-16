@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+</head>
+<body>
+  <h2>Login Form</h2>
+
+  <label>Email:</label>
+  <input type="text" id="email"><br><br>
+
+  <label>Password:</label>
+  <input type="password" id="password"><br><br>
+
+  <button onclick="login()">Login</button>
+
+  <p id="msg"></p>
+
+  <script>
+    // pehle variables undefined hain
+    let email;
+    let password;
+
+    function login(){
+      // ab user ki value assign ho rahi hai
+      email = document.getElementById("email").value;
+      password = document.getElementById("password").value;
+
+      if(email === "" || password === ""){
+        document.getElementById("msg").innerText = "❌ Please fill all fields";
+      }else{
+        document.getElementById("msg").innerText = "✅ Login successful! Welcome " + email;
+      }
+        
+    }''
+
+  </script>
+</body>
+</html>
